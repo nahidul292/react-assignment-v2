@@ -17,13 +17,13 @@ const Home = () => {
     return (
         <div>
             <div>
-                <div className="bg-image p-5 text-center shadow-5-strong rounded mb-5 text-white" 
+                <div className="bg-image p-5 text-center shadow-5-strong rounded mb-5 text-white img-fluid" 
                 style={{backgroundImage: `url("https://i.imgur.com/MNg0vCB.jpg")`, height: "350px", width: "100%"}}>
                 <h1 className="mb-3 h2" style={{fontSize: "50px" , fontWeight: "bold"}}>Sports Royal</h1>
                 <p style={{fontSize: "40px"}}>Total teams in this league: {teams.length}</p>
                 </div>
             </div>
-            <div className="row" >
+            <div className="row d-flex justify-content-center" >
                 {
                     teams.map(team => <Team team={team}></Team>)
                 }

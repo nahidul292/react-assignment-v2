@@ -18,7 +18,9 @@ const TeamDetails = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setTeam(data.teams[0]))
+        window.scrollTo(0,0);
     }, [idTeam]);
+
     let styles = {
         backgroundImage: `url(${strTeamBanner})`,
         backgroundSize: 'cover',
@@ -43,29 +45,31 @@ const TeamDetails = () => {
                 {/* Display image conditionally on Gender -using ternary operator */}
                 <div className="col-md-6 team-image">
                     {
-                        strGender==='Male' ? <img src={MaleImage} alt=""/> : <img src="" alt=""/>
+                        strGender==='Male' ? <img src={MaleImage} alt="" className="img-fluid"/> : <img src="" alt=""/>
                     }
                 </div>
             </div>
-            <h4>Team Details: </h4>
-            <div className="row">
-                <div className="col-md-9 details">
-                    <p style={{textAlign: "justify"}}>{strDescriptionEN}</p>
+            <div className="team-data">
+                <h4>Team Details: </h4>
+                <div className="row">
+                    <div className="col-md-9 details">
+                        <p style={{textAlign: "justify"}}>{strDescriptionEN}</p>
+                    </div>
+                    <div className="col-md-3 jersey">
+                        <img src={strTeamJersey} alt=""/>
+                        <p className="text-center"><strong>Jersey</strong></p>
+                    </div>
                 </div>
-                <div className="col-md-3 jersey">
-                    <img src={strTeamJersey} alt=""/>
-                    <p className="text-center"><strong>Jersey</strong></p>
+                <br/>
+                <p className="row justify-content-center"><strong>Connect socially</strong></p>
+                <div className="row justify-content-center">
+                    {/* <a href={twitterUrl} target="_blank"><FontAwesomeIcon icon={faTwitter} className="social" /></a>
+                    <a href={fbUrl} target="_blank"><FontAwesomeIcon icon={faFacebook} className="social" /></a>
+                    <a href={youtubeUrl} target="_blank"><FontAwesomeIcon icon={faYoutube} className="social" /></a> */}
+                    <a href={fbUrl} target="_blank"><img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" alt=""/></a>
+                    <a href={twitterUrl} target="_blank"><img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter2_colored_svg-512.png" alt=""/></a>
+                    <a href={youtubeUrl} target="_blank"><img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png" alt=""/></a>
                 </div>
-            </div>
-            <br/>
-            <p className="row justify-content-center"><strong>Connect socially</strong></p>
-            <div className="row justify-content-center">
-                <a href={twitterUrl} target="_blank"><FontAwesomeIcon icon={faTwitter} className="social" /></a>
-                <a href={fbUrl} target="_blank"><FontAwesomeIcon icon={faFacebook} className="social" /></a>
-                <a href={youtubeUrl} target="_blank"><FontAwesomeIcon icon={faYoutube} className="social" /></a>
-                {/* <a href={fbUrl} target="_blank"><img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" alt=""/></a>
-                <a href={twitterUrl} target="_blank"><img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter2_colored_svg-512.png" alt=""/></a>
-                <a href={youtubeUrl} target="_blank"><img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png" alt=""/></a> */}
             </div>
             <br/>
         </div>
