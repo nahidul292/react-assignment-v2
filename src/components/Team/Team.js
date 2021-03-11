@@ -14,7 +14,7 @@ const Team = (props) => {
         <div className="col-md-4 ">
             <div className="col-md-4 team-container justify-content-around">
                 <div className="card" style={{ width: '18rem' }}>
-                    <img src={strTeamBadge} class="card-img-top align-self-center" alt="..." />
+                    <img src={strTeamBadge} className="card-img-top align-self-center" alt="..." />
                     <div className="card-body text-center ">
                         <h5 className="card-title">{strTeam}</h5>
                         <p>Sports type: {strSport}</p>
