@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    padding:0;
+    }
+.team-image img {
+    width:450px;
+    height: 250px;
+}
+.team-details-block{
+    border: none;
+    border-radius:25px;
+    height:300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15px;
+    background-color: #3A42FF;
+    color: white;
+    display: flex;
+}
+.team-details-container{
+    margin: 0px 200px;
+    align-items: center;
+}
+.social {
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+}
+.team-banner{
+    opacity: 80%;
+    height: 400px;
+    width:100%;
+    /* background-image: url("https://i.imgur.com/4MDzp7X.jpg") */
+}
+.team-badge{
+    height: 300px;
+    width: 250px;
+    padding-top: 50px;
+}
+.jersey img{
+    height: 380px;
+    width: 400px
+}

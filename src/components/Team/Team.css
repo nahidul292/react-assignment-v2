@@ -1,0 +1,10 @@
+.team-container img{
+    width:200px;
+    height:170px;
+    margin-top:15px;
+}
+.team-container{
+    margin: 15px;
+    padding: 10px;
+    float:left;
+}
